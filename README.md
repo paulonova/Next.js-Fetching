@@ -39,7 +39,7 @@ if (!data) {
 
 ## Fallback in getStaticPaths()
 
-<p>In Next.js, the fallback key in the getStaticPaths function is crucial for handling dynamic routes when using Static Site Generation (SSG). It determines the behavior of the Next.js server when a request is made for a path that has not been generated at build time. There are three possible values for fallback: <strong>false</strong>, <strong>true</strong>, and <strong>blocking</strong>.</p>
+<p>In Next.js, the fallback key in the getStaticPaths function is crucial for handling dynamic routes when using Static Site Generation (SSG). It determines the behavior of the Next.js server when a request is made for a path that has not been generated at build time. There are three possible values for fallback: <strong>false</strong>, <strong>true</strong>, and <strong>'blocking' (should be a string)</strong>.</p>
 
 ```bash
   return {

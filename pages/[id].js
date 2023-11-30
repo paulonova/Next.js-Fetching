@@ -3,6 +3,10 @@ import fs from "fs/promises";
 import path from "path";
 
 function ProductDetailPage({ loadedProduct }) {
+  /**
+   * When you use fallback: true, the usual approach is set a Loading..
+   * when page starts
+   */
   if (!loadedProduct) {
     return <p>Loading...</p>;
   }
