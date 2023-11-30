@@ -1,4 +1,4 @@
-# SOme Studies about Next JS
+# Some Studies about Next JS
 
 ## Getting Started
 
@@ -36,3 +36,27 @@ if (!data) {
 ```
 
 <p>In Next.js, when you return an object with the redirect property from getServerSideProps or getStaticProps, it instructs Next.js to redirect the user to a different destination. The destination key within the redirect object specifies the URL to which the user should be redirected.</p>
+
+## Fallback in getStaticPaths()
+
+<p>In Next.js, the fallback key in the getStaticPaths function is crucial for handling dynamic routes when using Static Site Generation (SSG). It determines the behavior of the Next.js server when a request is made for a path that has not been generated at build time. There are three possible values for fallback: <strong>false</strong>, <strong>true</strong>, and <strong>blocking</strong>.</p>
+
+```bash
+  return {
+    paths: [
+      { params: { id: "p1" } },
+      { params: { id: "p2" } },
+      { params: { id: "p3" } },
+    ],
+    fallback: false,
+  };
+```
+
+```bash
+  return {
+    paths: [
+      { params: { id: "p1" } }
+    ],
+    fallback: true,
+  };
+```
